@@ -1,7 +1,7 @@
 part of './pages.dart';
 
 abstract class Routes {
-  static const ROOT = '/';
-  static const LAUNCH = '/launch';
-  static const PETS_DETAIL = '/petsdetail';
+  static const root = '/';
+  static const launch = '/launch';
+  static const petsDetail = '/petsdetail';
 }

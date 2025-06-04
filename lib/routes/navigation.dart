@@ -4,14 +4,14 @@ import 'package:pet_app_ui/routes/pages.dart';
 
 class Navigation {
   static void toRoot() {
-    Get.offAllNamed(Routes.ROOT);
+    Get.offAllNamed(Routes.root);
   }
 
   static void toLaunch() {
-    Get.offAllNamed(Routes.LAUNCH);
+    Get.offAllNamed(Routes.launch);
   }
 
   static void toPetsDetail(Cat cat) {
-    Get.toNamed(Routes.PETS_DETAIL, arguments: {'cat': cat});
+    Get.toNamed(Routes.petsDetail, arguments: {'cat': cat});
   }
 }

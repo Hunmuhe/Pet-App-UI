@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
           child: Container(
             height: size.height * 0.3,
             width: size.width * 0.55,
-            color: cat.color.withOpacity(0.5),
+            color: cat.color.withValues(alpha: 0.5),
             child: Stack(
               children: [
                 Positioned(
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                           cat.fav
                               ? Icons.favorite_rounded
                               : Icons.favorite_outline_rounded,
-                          color: cat.fav ? Colors.red : black.withOpacity(0.6),
+                          color: cat.fav ? Colors.red : black.withValues(alpha: 0.6),
                         ),
                       ),
                     ],
@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 18),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Colors.black12.withOpacity(0.03),
+              color: Colors.black12.withValues(alpha: 0.03),
             ),
             child: const Icon(Icons.tune_rounded),
           ),
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(15),
                     color: selectedCategory == index
                         ? buttonColor
-                        : Colors.black12.withOpacity(0.03),
+                        : Colors.black12.withValues(alpha: 0.03),
                   ),
                   child: Text(
                     categories[index],
@@ -253,7 +253,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Text(
                 "Location",
-                style: TextStyle(fontSize: 16, color: black.withOpacity(0.6)),
+                style: TextStyle(fontSize: 16, color: black.withValues(alpha: 0.6)),
               ),
               const SizedBox(width: 5),
               const Icon(
@@ -288,7 +288,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Colors.black12.withOpacity(0.03),
+                  color: Colors.black12.withValues(alpha: 0.03),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: const Icon(Icons.search),
@@ -297,7 +297,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Colors.black12.withOpacity(0.03),
+                  color: Colors.black12.withValues(alpha: 0.03),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Stack(

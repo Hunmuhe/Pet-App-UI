@@ -59,7 +59,7 @@ class _RootPageState extends State<RootPage> {
                           size: 30,
                           color: selectedIndex == index
                               ? blue
-                              : black.withOpacity(0.6),
+                              : black.withValues(alpha: 0.6),
                         ),
                         const SizedBox(height: 5),
                         selectedIndex == index

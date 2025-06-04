@@ -58,19 +58,19 @@ class _PetsDetailPageState extends State<PetsDetailPage> {
                           children: [
                             moreInfo(
                               color1,
-                              color1.withOpacity(0.5),
+                              color1.withValues(alpha: 0.5),
                               cat.sex,
                               "Sex",
                             ),
                             moreInfo(
                               color2,
-                              color2.withOpacity(0.5),
+                              color2.withValues(alpha: 0.5),
                               "${cat.age.toString()} Years",
                               "Age",
                             ),
                             moreInfo(
                               color3,
-                              color3.withOpacity(0.5),
+                              color3.withValues(alpha: 0.5),
                               "${cat.weight.toString()} KG",
                               "Weight",
                             ),
@@ -78,7 +78,7 @@ class _PetsDetailPageState extends State<PetsDetailPage> {
                         ),
                         const SizedBox(height: 20),
                         // for woiner name and contact
-                        WonerInfo(),
+                        wonerInfo(),
                         // for description
                         const SizedBox(height: 20),
                         // for this see more and see less you need to add a package
@@ -126,7 +126,7 @@ class _PetsDetailPageState extends State<PetsDetailPage> {
     );
   }
 
-  Row WonerInfo() {
+  Row wonerInfo() {
     return Row(
       children: [
         CircleAvatar(
@@ -157,7 +157,7 @@ class _PetsDetailPageState extends State<PetsDetailPage> {
         Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: color3.withOpacity(0.3),
+            color: color3.withValues(alpha: 0.3),
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Icon(
@@ -170,7 +170,7 @@ class _PetsDetailPageState extends State<PetsDetailPage> {
         Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: Colors.red.withOpacity(0.2),
+            color: Colors.red.withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Icon(Icons.phone_outlined, color: Colors.red, size: 16),
@@ -200,7 +200,7 @@ class _PetsDetailPageState extends State<PetsDetailPage> {
                   Text(
                     '${cat.location} (${cat.distance} Km)',
                     style: TextStyle(
-                      color: black.withOpacity(0.6),
+                      color: black.withValues(alpha: 0.6),
                       fontSize: 16,
                     ),
                   ),
@@ -219,8 +219,8 @@ class _PetsDetailPageState extends State<PetsDetailPage> {
               BoxShadow(
                 offset: const Offset(0, 3),
                 color: cat.fav
-                    ? Colors.red.withOpacity(0.1)
-                    : black.withOpacity(0.2),
+                    ? Colors.red.withValues(alpha: 0.1)
+                    : black.withValues(alpha: 0.2),
                 blurRadius: 2,
                 spreadRadius: 1,
               ),
@@ -228,7 +228,7 @@ class _PetsDetailPageState extends State<PetsDetailPage> {
           ),
           child: Icon(
             cat.fav ? Icons.favorite_rounded : Icons.favorite_border_rounded,
-            color: cat.fav ? Colors.red : black.withOpacity(0.6),
+            color: cat.fav ? Colors.red : black.withValues(alpha: 0.6),
           ),
         ),
       ],
@@ -273,7 +273,7 @@ class _PetsDetailPageState extends State<PetsDetailPage> {
     return Container(
       height: size.height * 0.50,
       width: size.width,
-      decoration: BoxDecoration(color: cat.color.withOpacity(0.5)),
+      decoration: BoxDecoration(color: cat.color.withValues(alpha: 0.5)),
       child: Stack(
         children: [
           Positioned(

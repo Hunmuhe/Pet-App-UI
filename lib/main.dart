@@ -11,8 +11,8 @@ Future<void> main() async {
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: Get.find<ConfigStore>().isFirstLaunch.value == true
-          ? Routes.LAUNCH
-          : Routes.ROOT,
+          ? Routes.launch
+          : Routes.root,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),

@@ -6,8 +6,8 @@ part './routes.dart';
 
 abstract class AppPages {
   static final pages = [
-    GetPage(name: Routes.ROOT, page: () => const RootPage()),
-    GetPage(name: Routes.LAUNCH, page: () => const LaunchPage()),
-    GetPage(name: Routes.PETS_DETAIL, page: () => const PetsDetailPage()),
+    GetPage(name: Routes.root, page: () => const RootPage()),
+    GetPage(name: Routes.launch, page: () => const LaunchPage()),
+    GetPage(name: Routes.petsDetail, page: () => const PetsDetailPage()),
   ];
 }

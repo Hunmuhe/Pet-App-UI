@@ -96,7 +96,7 @@ class _LaunchPageState extends State<LaunchPage> {
       margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: currentPage == index ? Colors.orange : black.withOpacity(0.2),
+        color: currentPage == index ? Colors.orange : black.withValues(alpha: 0.2),
       ),
     );
   }
