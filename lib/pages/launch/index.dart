@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pet_app_ui/l10n/app_localizations.dart';
 import 'package:pet_app_ui/storages/config.dart';
 import 'package:pet_app_ui/utils/color.dart';
 import 'package:pet_app_ui/data/boards.dart';
@@ -15,6 +16,20 @@ class LaunchPage extends StatefulWidget {
 class _LaunchPageState extends State<LaunchPage> {
   final PageController _pageController = PageController();
   int currentPage = 0;
+  late List<Board> boards;
+  late AppLocalizations localizations;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    localizations = AppLocalizations.of(context)!;
+    boards = boardsData(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +43,7 @@ class _LaunchPageState extends State<LaunchPage> {
             height: size.height * 0.7,
             color: Colors.white,
             child: PageView.builder(
-              itemCount: boardsData.length,
+              itemCount: boards.length,
               onPageChanged: (value) {
                 setState(() {
                   currentPage = value;
@@ -42,7 +57,7 @@ class _LaunchPageState extends State<LaunchPage> {
           ),
           GestureDetector(
             onTap: () async {
-              if (currentPage == boardsData.length - 1) {
+              if (currentPage == boards.length - 1) {
                 await Get.find<ConfigStore>().setFirstLaunch(false);
                 Navigation.toRoot();
               } else {
@@ -61,9 +76,9 @@ class _LaunchPageState extends State<LaunchPage> {
               ),
               child: Center(
                 child: Text(
-                  currentPage == boardsData.length - 1
-                      ? "Get Stared"
-                      : "Continue",
+                  currentPage == boards.length - 1
+                      ? localizations.getStarted
+                      : localizations.continuex,
                   style: const TextStyle(
                     fontSize: 20,
                     color: Colors.white,
@@ -78,7 +93,7 @@ class _LaunchPageState extends State<LaunchPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ...List.generate(
-                boardsData.length,
+                boards.length,
                 (index) => indicatorForSlider(index: index),
               ),
             ],
@@ -96,7 +111,9 @@ class _LaunchPageState extends State<LaunchPage> {
       margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: currentPage == index ? Colors.orange : black.withValues(alpha: 0.2),
+        color: currentPage == index
+            ? Colors.orange
+            : black.withValues(alpha: 0.2),
       ),
     );
   }
@@ -158,7 +175,7 @@ class _LaunchPageState extends State<LaunchPage> {
                 bottom: 0,
                 right: 60,
                 child: Image.asset(
-                  boardsData[index].image,
+                  boards[index].image,
                   height: 375,
                   fit: BoxFit.fill,
                 ),
@@ -167,7 +184,7 @@ class _LaunchPageState extends State<LaunchPage> {
           ),
         ),
         const SizedBox(height: 30),
-        const Text.rich(
+        Text.rich(
           TextSpan(
             style: TextStyle(
               fontSize: 35,
@@ -176,22 +193,22 @@ class _LaunchPageState extends State<LaunchPage> {
               height: 1.2,
             ),
             children: [
-              TextSpan(text: "Find You "),
+              TextSpan(text: localizations.findYou),
               TextSpan(
-                text: "Dream\n",
+                text: localizations.dream,
                 style: TextStyle(
                   color: Colors.lightBlue,
                   fontWeight: FontWeight.w900,
                 ),
               ),
-              TextSpan(text: "Pet Here"),
+              TextSpan(text: localizations.petHere),
             ],
           ),
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 10),
         Text(
-          boardsData[index].text,
+          boards[index].text,
           textAlign: TextAlign.center,
           style: const TextStyle(fontSize: 15.5, color: Colors.black38),
         ),

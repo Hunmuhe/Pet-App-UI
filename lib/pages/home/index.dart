@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_app_ui/l10n/app_localizations.dart';
 import 'package:pet_app_ui/utils/color.dart';
 import 'package:pet_app_ui/data/cats.dart';
 import 'package:pet_app_ui/routes/navigation.dart';

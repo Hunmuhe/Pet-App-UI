@@ -1,0 +1,19 @@
+{
+    "@@locale": "zh",
+    "board1": "加入我们\n发现您所在地区最好的宠物",
+    "board2": "我们帮助人们\n与你周围的宠物联系",
+    "board3": "我们展示了收养宠物的简单方法\n就和我们呆在家里吧.",
+    "continuex": "继续",
+    "getStarted": "开始",
+    "findYou": "发现你 ",
+    "dream": "梦想\n",
+    "petHere": "宠物在这里",
+    "@board1": {},
+    "@board2": {},
+    "@board3": {},
+    "@continuex": {},
+    "@getStarted": {},
+    "@findYou": {},
+    "@dream": {},
+    "@petHere": {}
+}
