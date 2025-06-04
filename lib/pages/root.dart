@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_app_ui/config/color.dart';
+import 'package:pet_app_ui/utils/color.dart';
 import 'package:pet_app_ui/pages/chat/index.dart';
 import 'package:pet_app_ui/pages/favorite/index.dart';
 import 'package:pet_app_ui/pages/home/index.dart';
@@ -71,7 +71,7 @@ class _RootPageState extends State<RootPage> {
                                   color: blue,
                                 ),
                               )
-                            : Container(),
+                            : SizedBox(height: 5, width: 5),
                       ],
                     ),
                     index == 2

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:pet_app_ui/routes/pages.dart';
+import 'package:pet_app_ui/storages/config.dart';
 
 Future<void> main() async {
   await initStorage();
@@ -8,10 +10,9 @@ Future<void> main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.LAUNCH,
-      // initialRoute: Get.find<ConfigStore>().isFirstLaunch.value == true
-      //     ? Routes.LAUNCH
-      //     : Routes.ROOT,
+      initialRoute: Get.find<ConfigStore>().isFirstLaunch.value == true
+          ? Routes.LAUNCH
+          : Routes.ROOT,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
@@ -22,7 +23,6 @@ Future<void> main() async {
 }
 
 Future<void> initStorage() async {
-  // await GetStorage.init();
-  // Get.put(ConfigStore());
-  // Get.put(UserStore());
+  await GetStorage.init();
+  Get.put(ConfigStore());
 }

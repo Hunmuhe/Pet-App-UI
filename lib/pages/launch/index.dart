@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pet_app_ui/config/color.dart';
+import 'package:get/get.dart';
+import 'package:pet_app_ui/storages/config.dart';
+import 'package:pet_app_ui/utils/color.dart';
 import 'package:pet_app_ui/data/boards.dart';
 import 'package:pet_app_ui/routes/navigation.dart';
 
@@ -39,8 +41,9 @@ class _LaunchPageState extends State<LaunchPage> {
             ),
           ),
           GestureDetector(
-            onTap: () {
+            onTap: () async {
               if (currentPage == boardsData.length - 1) {
+                await Get.find<ConfigStore>().setFirstLaunch(false);
                 Navigation.toRoot();
               } else {
                 _pageController.nextPage(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-List<String> categories = ['Cats', 'Dogs', 'Birds', 'Fishs'];
+List<String> categories = ['Cats', 'Dogs', 'Birds', 'Fishs', 'tortoise', 'alpaca', 'hedgehog'];
 
 class Cat {
   final Color color;

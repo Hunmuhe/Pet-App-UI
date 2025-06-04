@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pet_app_ui/config/color.dart';
+import 'package:pet_app_ui/utils/color.dart';
 import 'package:pet_app_ui/data/cats.dart';
 import 'package:readmore/readmore.dart';
 
