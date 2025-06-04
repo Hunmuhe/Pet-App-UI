@@ -35,7 +35,7 @@ List<Cat> cats = [
     sex: 'Male',
     age: 2.1,
     weight: 4.5,
-    image: 'assets/pets-image/cat4.png',
+    image: 'assets/images/cat4.png',
     distance: 5,
     owner: owners[0],
   ),
@@ -47,7 +47,7 @@ List<Cat> cats = [
     location: 'Siak, Riau',
     sex: 'Male',
     age: 1.1,
-    image: 'assets/pets-image/cat2.png',
+    image: 'assets/images/cat2.png',
     weight: 2.2,
     distance: 7,
     owner: owners[1],
@@ -56,7 +56,7 @@ List<Cat> cats = [
     fav: true,
     color: const Color(0xffa4e1ff),
     name: 'Cleo',
-    image: 'assets/pets-image/cat3.png',
+    image: 'assets/images/cat3.png',
     description: desc,
     location: 'Pekanbaru, Riau',
     sex: 'Male',
@@ -68,7 +68,7 @@ List<Cat> cats = [
   Cat(
     fav: true,
     color: const Color(0xfffa9191),
-    image: 'assets/pets-image/cat5.png',
+    image: 'assets/images/cat5.png',
     name: 'Milo',
     description: desc,
     location: 'Kampar, Riau',
@@ -87,7 +87,7 @@ List<Cat> cats = [
     sex: 'Male',
     age: 2.1,
     weight: 4.5,
-    image: 'assets/pets-image/cat1.png',
+    image: 'assets/images/cat1.png',
     distance: 7,
     owner: owners[0],
   ),
@@ -102,7 +102,7 @@ class Owner {
 }
 
 List<Owner> owners = [
-  Owner(name: 'Sophia', image: 'assets/pets-image/woman-with-cat1.png'),
-  Owner(name: 'Annie', image: 'assets/pets-image//woman-with-cat2.png'),
-  Owner(name: 'Jessica', image: 'assets/pets-image/woman-with-cat3.png'),
+  Owner(name: 'Sophia', image: 'assets/images/woman-with-cat1.png'),
+  Owner(name: 'Annie', image: 'assets/images/woman-with-cat2.png'),
+  Owner(name: 'Jessica', image: 'assets/images/woman-with-cat3.png'),
 ];
